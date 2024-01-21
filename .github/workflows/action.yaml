@@ -6,7 +6,7 @@ on:
       - main
 env:
   CONTAINER_REGISTRY: ghcr.io
-  CONTAINER_IMAGE: sample-rak
+  CONTAINER_IMAGE: samplerak
   IMAGE_TAG: ${{ github.run_number }}
   
 
