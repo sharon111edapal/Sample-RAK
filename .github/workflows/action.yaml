@@ -7,6 +7,7 @@ on:
 env:
   CONTAINER_REGISTRY: ghcr.io
   CONTAINER_IMAGE: samplerak
+  REPOSITORY_NAME: sharon111edapal
   IMAGE_TAG: ${{ github.run_number }}
   
 
@@ -24,4 +25,4 @@ jobs:
           context: .
           dockerfile: Dockerfile
           push: true
-          tags: ${{ env.CONTAINER_REGISTRY }}/${{ env.CONTAINER_IMAGE }}:${{ env.IMAGE_TAG }}
+          tags: ${{ env.CONTAINER_REGISTRY }}/${{ env.REPOSITORY_NAME }}/${{ env.CONTAINER_IMAGE }}:${{ env.IMAGE_TAG }}
