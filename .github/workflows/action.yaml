@@ -44,5 +44,5 @@ jobs:
       - name: Deploy
         run: |
           aws eks update-kubeconfig --name rak-eks-cluster
-          sed -i "s/latest/${{ env.IMAGE_TAG }}/g" deployment.yaml
+          #sed -i "s/latest/${{ env.IMAGE_TAG }}/g" deployment.yaml
           kubectl apply -f deployment.yaml
