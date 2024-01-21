@@ -17,7 +17,7 @@ FROM eclipse-temurin:11
 
 #copy hello world to docker image from builder image
 
-COPY --from=BUILD /tmp/target/hello-world-0.1.0.jar /data/hello-world-0.1.0.jar
+COPY --from=BUILD /tmp/target/rak.jar /data/rak.jar
 
 #default command
 CMD ["java", "-jar", "/data/hello-world-0.1.0.jar"]
