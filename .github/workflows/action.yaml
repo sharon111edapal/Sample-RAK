@@ -44,5 +44,4 @@ jobs:
       - name: Deploy
         run: |
           aws eks update-kubeconfig --name rak-eks-cluster
-
-          kubectl apply -f deployment.yaml
+          kubectl apply -f deployment.yaml
