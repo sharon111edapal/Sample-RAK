@@ -1,6 +1,7 @@
 # Maven build container 
 
-FROM maven:3.8.5-openjdk-11 AS maven_build
+#FROM maven:3.8.5-openjdk-11 AS maven_build
+FROM maven:3.8.5-openjdk-17-slim AS BUILD
 
 COPY pom.xml /tmp/
 
@@ -16,7 +17,7 @@ FROM eclipse-temurin:11
 
 #copy hello world to docker image from builder image
 
-COPY --from=maven_build /tmp/target/hello-world-0.1.0.jar /data/hello-world-0.1.0.jar
+COPY --from=BUILD /tmp/target/hello-world-0.1.0.jar /data/hello-world-0.1.0.jar
 
 #default command
 CMD ["java", "-jar", "/data/hello-world-0.1.0.jar"]
