@@ -17,10 +17,10 @@ FROM eclipse-temurin:11
 
 #copy hello world to docker image from builder image
 
-COPY --from=BUILD /tmp/target/rak.jar /data/rak.jar
+COPY --from=BUILD /tmp/target/rak-0.0.1-SNAPSHOT.jar /data/rak-0.0.1-SNAPSHOT.jar
 
 #default command
-CMD ["java", "-jar", "/data/hello-world-0.1.0.jar"]
+CMD ["java", "-jar", "/data/rak-0.0.1-SNAPSHOT.jar"]
 
 EXPOSE 8080
 
