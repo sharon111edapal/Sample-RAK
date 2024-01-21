@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: api-service  
-  namespace: sampleapp2
+  name: rakapp
+  namespace: rak
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: api-service
+      app: rakapp
   template:
     metadata:
       labels:
-        app: api-service
+        app: rakapp
     spec:
       containers:
-      - name: api-service
+      - name: rakapp
         image:  sharon111edapal/samplerak:latest
         ports:
         - containerPort: 8080
